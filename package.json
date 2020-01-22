@@ -1,0 +1,30 @@
+{
+  "name": "Template-Engine",
+  "version": "1.0.0",
+  "description": "OOP and testing for week 10 homework",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoe14/Template-Engine"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoe14/Template-Engine/issues"
+  },
+  "homepage": "https://github.com/schoe14/Template-Engine#readme",
+  "dependencies": {
+    "handlebars": "^4.7.2",
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}

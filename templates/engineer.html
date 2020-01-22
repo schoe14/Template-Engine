@@ -1,0 +1,13 @@
+<div class="row engineer">
+    {{#each this}}
+    {{#with Engineer}}
+    <div class="eContent col-3 py-3 mx-auto">
+        <h3>{{title}}</h3>
+        <h4>Name: {{name}}</h4>
+        <h4>Id: {{id}}</h4>
+        <h4>Email: {{email}}</h4>
+        <h4>Github: {{github}}</h4>
+    </div>
+    {{/with}}
+    {{/each}}
+</div>

@@ -1,0 +1,28 @@
+html, body {
+    font-family: 'Rambla', sans-serif;
+    padding: 0 !important;
+    background-color: #fbf4f9;
+}
+
+.top {
+    font-size: 25px;
+    background-color: #f6e5f5;
+    text-align: center;
+}
+
+#top-header {
+    font-size: 50px;
+}
+
+.row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mContent, .eContent, .iContent{
+    background-color: #fea5ad;
+}
+
+@media (min-width: 576px) {
+    
+}

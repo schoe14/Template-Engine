@@ -1,0 +1,13 @@
+<div class="row manager">
+    {{#each this}}
+    {{#with Manager}}
+    <div class="mContent col-4 py-3 mx-auto">
+        <h3>{{title}}</h3>
+        <h4>Name: {{name}}</h4>
+        <h4>Id: {{id}}</h4>
+        <h4>Email: {{email}}</h4>
+        <h4>Office Number: {{officeNumber}}</h4>
+    </div>
+    {{/with}}
+    {{/each}}
+</div>
