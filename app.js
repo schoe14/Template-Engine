@@ -1,9 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const hbs = require("handlebars");
-// const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+
 const Helpers = require("./lib/Helpers");
 const EmployeeArr = require("./lib/EmployeeArr");
 
@@ -92,16 +90,24 @@ function writeHTML(filename, combinedData) {
         const employeesAdded = employeeArr.getEmployees();
         // console.log(employeesAdded);
 
-        // const mainHTML = fs.readFileSync('./templates/main.html', 'utf8').toString();
+        const templates = ['./templates/main.html', './templates/manager.html', './templates/engineer.html',
+            './templates/intern.html'];
 
-        const mainResult = await render('./templates/main.html', employeesAdded);
-        const managerResult = await render('./templates/manager.html', employeesAdded);
-        const engineerResult = await render('./templates/engineer.html', employeesAdded);
-        const internResult = await render('./templates/intern.html', employeesAdded);
+        const results = templates.map(function (template) {
+            const result = render(template, employeesAdded);
+            return result;
+        })
 
-        const combinedResult = mainResult + managerResult + engineerResult + internResult;
+        writeHTML("team", results.join(''));
 
-        await writeHTML("team", combinedResult);
+        // const mainResult = await render('./templates/main.html', employeesAdded);
+        // const managerResult = await render('./templates/manager.html', employeesAdded);
+        // const engineerResult = await render('./templates/engineer.html', employeesAdded);
+        // const internResult = await render('./templates/intern.html', employeesAdded);
+
+        // const combinedResult = mainResult + managerResult + engineerResult + internResult;
+
+        // await writeHTML("team", combinedResult);
 
     } catch (e) {
         console.log('error', e);
