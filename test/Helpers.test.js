@@ -12,7 +12,7 @@ test("Can set role via constructor arguments", () => {
   expect(e.role).toBe(role);
 });
 
-test("Can get employeeInfo via constructor arguments", () => {
+test("Can get employeeInfo via employeeInfo()", () => {
   const result = new Manager();
   const e = new Helpers("Manager");
   expect(e.employeeInfo()).toStrictEqual(result);

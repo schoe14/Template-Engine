@@ -5,11 +5,9 @@ test("Can instantiate EmployeeArr instance", () => {
     expect(typeof (e)).toBe("object");
 });
 
-test("Can set employees array and managerCapa", () => {
-    const manager = 1;
+test("Can set employees array via constructor", () => {
     const employeesArray = [];
     const e = new EmployeeArr();
-    expect(e.managerCapa).toBe(manager);
     expect(e.employees).toStrictEqual(employeesArray);
 });
 
