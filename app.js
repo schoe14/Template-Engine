@@ -129,6 +129,12 @@ const promptUser2 = () => {
                 } else {
                     return "Please enter a valid school name (letters). Press upwards arrow to re-enter your value";
                 }
+            },
+            filter: function (value) {
+                if (value.includes(" ")) {
+                    return value.split(" ").map(function (val) { return val.charAt(0).toUpperCase() + val.substring(1); }).join(" ");
+                } else if (value.length > 1) return value.charAt(0).toUpperCase() + value.substring(1);
+                else { return value.charAt(0).toUpperCase(); }
             }
         }
     ])

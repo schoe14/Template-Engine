@@ -6,12 +6,13 @@ html, body {
     height: 100%;
     margin: 0 auto;
     overflow-x: hidden;
-    color: #303336;
+    color: #1b262c;
 }
 
 .top {
     font-size: 25px;
-    background-color: #f6e5f5;
+    background-color: #1b262c;
+    color: whitesmoke;
     text-align: center;
 }
 
@@ -29,9 +30,27 @@ html, body {
     margin: 0 !important;
 }
 
-.mContent, .eContent, .iContent{
-    background-color: #fea5ad;
+.mContent {
+    background-color: #0f4c75;
     margin-bottom: 20px !important;
+}
+
+.mContent .card-body, .eContent .card-body {
+    color: whitesmoke;
+}
+
+.eContent {
+    margin-bottom: 20px !important;
+    background-color: #3282b8;
+}
+
+.iContent {
+    margin-bottom: 20px !important;
+    background-color: #bbe1fa;
+}
+
+.iContent .card-body {
+    color: #0f4c75;
 }
 
 h3 {
