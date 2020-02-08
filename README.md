@@ -20,4 +20,4 @@ To run this project:
 2. Install packages :star2:
 <pre> npm install </pre>
 3. Command :+1:
-<pre> node index </pre>
+<pre> node app </pre>
